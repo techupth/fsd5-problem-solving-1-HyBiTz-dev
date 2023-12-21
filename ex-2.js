@@ -1,7 +1,9 @@
 //Exercise 2: Valid Palindrome
 
-const isPalindrome = function (s) {
+const isPalindrome = function (word) {
   //Start Coding here
+  let text = word.replace(/[^a-zA-Z0-9]+/g, "").toLowerCase();
+  return text == text.split("").reverse().join("");
 };
 
 const result1 = isPalindrome("A man, a plan, a canal: Panama");
